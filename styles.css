@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+}
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size : 15px;
+    background-color : var(--very-light-gray);
+    color : var(--grayish-blue);
+
+}
+
+header{
+    text-align : center;
+}
+
+header p {
+    max-width : 600px; /*makes it being more then 1 line*/
+    margin : 25px auto 0; /*makes it center */
+}
+
+header h2{
+    font-size : 35px;
+    font-weight : 200;
+}
+
+
+header h3{
+    font-size : 35px;
+    font-weight : 600;
+    color : var(--very-dark-blue);
+}
+
+
+
+.container{
+    max-width : 1200px;
+    margin : 0 auto;
+    padding : 50px 30px;
+}
+
+.boxes{
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr;
+    gap : 25px;
+    margin-top : 60px;
+}
+/*all the boxes commands: */
+.box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: right;
+    box-shadow: 5px 10px 7px #888888;
+}
+
+.box-text{
+    text-align : left;
+    padding-bottom : 40px;
+}
+
+.box-1 {
+    border-top : 4px solid var(--cyan);
+}
+
+.box-2 {
+    border-top: 4px solid var(--red);
+}
+
+.box-3 {
+    border-top: 4px solid var(--orange);
+}
+
+.box-4 {
+    border-top: 4px solid var(--blue);
+}
+
+.box-text h5{
+    font-size : 20px;
+    color : var(--very-dark-blue);
+    margin-bottom : 10px;
+}
+
+.box-2-3 {
+    display : flex;
+    flex-direction : column;
+    gap : 25px;
+}
+
+.box-1,
+.box-4{
+    align-self : center;
+}
+
+@media only screen and (max-width : 426px){
+    .boxes{
+        display : flex;
+        flex-direction : column;
+    }
+    header h2 {
+        font-size: 23px;
+        white-space: nowrap;
+    }
+    header h3 {
+        font-size: 23px;
+        white-space: nowrap;
+    }
+    header p {
+        max-width : 300px;
+    }
+}
